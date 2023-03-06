@@ -37,6 +37,7 @@ PS：本教程不仅仅针对云函数，你也可以托管在自己的服务器
 
 改为：`https://service-aaaaa.hk.apigw.tencentcs.com/`
 
+
 ## 如何使用
 
 你可以在任何支持配置 OpenAI 代理的软件中使用这个服务，例如在 CatGPT 中配置：
@@ -55,3 +56,8 @@ cd openai-scf-proxy
 npm install
 npm run start
 ```
+## 补充注意事项
+- 如果【访问路径】为空，可能是没配置【触发管理】
+- 首次使用云函数需要账号授权，另外还需要授权API网关，要不然可能会导致部署失败
+- 测试：https://xxxx.hk.apigw.tencentcs.com/v1/completions，返回提示需要API KEY即为成功
+- 部署成功后，你的云函数调用链接最好保密，要不然别人也能调用你的
